@@ -1,5 +1,12 @@
 package com.pack.cbs.model;
 
+/** This is an entity class for CBSEmployee module with getters, setters and constructor
+ * 
+ * @author Reshma's
+ *
+ */
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

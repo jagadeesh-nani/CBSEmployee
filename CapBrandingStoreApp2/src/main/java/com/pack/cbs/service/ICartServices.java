@@ -4,6 +4,13 @@ import java.util.List;
 import com.pack.cbs.exception.ResourceNotFoundException;
 import com.pack.cbs.model.Cart;
 
+/** This is an interface which defines CRUD methods for Cart service
+ * 
+ * @author Reshma's
+ *
+ */
+
+
 public interface ICartServices {
 	 public List<Cart> getAllProducts();
 	 public Cart saveProduct(Cart product);

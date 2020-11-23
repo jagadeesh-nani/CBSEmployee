@@ -1,13 +1,18 @@
 package com.pack.cbs.service;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.pack.cbs.dao.CBSEmployeeRepository;
 import com.pack.cbs.exception.ResourceNotFoundException;
 import com.pack.cbs.model.CBSEmployee;
+
+/** The CBSEmployeeService class provides access to repository methods to CRUD operations CBSEmployee details 
+ * 
+ * 
+ * @author Reshma's
+ *
+ */
+
 
 @Service
 

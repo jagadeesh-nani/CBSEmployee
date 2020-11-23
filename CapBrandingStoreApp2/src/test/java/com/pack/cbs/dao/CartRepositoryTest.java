@@ -1,5 +1,12 @@
 package com.pack.cbs.dao;
 
+/** The CartRepositoryTest class provides testing of CartRepository layer
+ *   
+ * @author Reshma's
+ * 
+ */
+
+
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import org.junit.Assert;
@@ -19,7 +26,7 @@ class CartRepositoryTest {
     @Autowired
     private TestEntityManager testEntityManager;
     @Test
-    public void testNewCart() throws Exception{
+     void testNewCart() throws Exception{
         Cart cart = getCart();
         Cart saveInDb = testEntityManager.persist(cart);
         Cart getFromInDb = cartrepository.findById(saveInDb.getProductId()).get();
@@ -33,7 +40,7 @@ class CartRepositoryTest {
 		return ecart;
 	}
 	@Test
-    public void testGetProductById() throws Exception{
+     void testGetProductById() throws Exception{
         Cart cart = new Cart();
         cart.setProductName("Water Bottle");
 		cart.setProductPrice(1500);
@@ -44,7 +51,7 @@ class CartRepositoryTest {
         assertThat(getInDb).isEqualTo(saveInDb);
 	}
 	 @Test
-	    public void testGetAllProducts() throws Exception{
+	    void testGetAllProducts() throws Exception{
 		 Cart cart = new Cart();
 		 cart.setProductName("Sandals");
 			cart.setProductPrice(100);
@@ -62,7 +69,7 @@ class CartRepositoryTest {
 	        Assert.assertEquals(2, cartList.size());
 	    }
 	 @Test
-	    public void testDeleteCartById() throws Exception{
+	    void testDeleteCartById() throws Exception{
 		 Cart cart = new Cart();
 		    cart.setProductName("Samsung");
 			cart.setProductPrice(60000);
@@ -85,7 +92,7 @@ class CartRepositoryTest {
 
 	    }
 	 @Test
-	    public void testUpdateCart(){
+	   void testUpdateCart(){
 
 		 Cart cart = new Cart();
 		 cart.setProductName("Shirt");

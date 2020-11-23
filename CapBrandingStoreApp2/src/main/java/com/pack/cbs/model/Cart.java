@@ -1,5 +1,12 @@
 package com.pack.cbs.model;
 
+
+/** This is an entity class for Cart module with getters, setters
+ * 
+ * @author Reshma's
+ *
+ */
+    import io.swagger.annotations.ApiModelProperty;
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
 	import javax.persistence.GeneratedValue;
@@ -12,13 +19,17 @@ package com.pack.cbs.model;
 		public class Cart {
 	    @Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
+	    @ApiModelProperty(notes = "Product Id",name="productId",required=true,value="test productId")
 	    @Column(name="product_id")
 		private Integer productId;
-		@Column(name="product_name",nullable = false)
+	    @ApiModelProperty(notes = "Product Name",name="productName",required=true,value="test productName")
+        @Column(name="product_name",nullable = false)
 		private String productName;
 		@Column(name="product_price",nullable = false)
+		 @ApiModelProperty(notes = "Product Price",name="productPrice",required=true,value="test productPrice")
 		private double productPrice;
 		@Column(name="product_quantity",nullable = false)
+		 @ApiModelProperty(notes = "Product Quantity",name="quantity",required=true,value="test quantity")
 		private int quantity;
 		public Integer getProductId() {
 			return productId;

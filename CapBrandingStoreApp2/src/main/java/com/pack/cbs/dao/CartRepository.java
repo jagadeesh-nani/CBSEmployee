@@ -5,6 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import com.pack.cbs.model.Cart;
 
+
+/** This is a repository class for Cart module 
+ * 
+ * @author Reshma's
+ *
+ */
+
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Integer> {
 

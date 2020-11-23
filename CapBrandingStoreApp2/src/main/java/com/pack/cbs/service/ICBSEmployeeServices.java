@@ -1,5 +1,12 @@
 package com.pack.cbs.service;
 
+/** This is an interface which defines CRUD methods for CBSEmployee service
+ * 
+ * @author Reshma's
+ *
+ */
+
+
 import java.util.List;
 
 import com.pack.cbs.exception.ResourceNotFoundException;

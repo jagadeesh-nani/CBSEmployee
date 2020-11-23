@@ -1,5 +1,12 @@
 package com.pack.cbs.controller;
 
+/** The CartControllerTest class provides testing of CartController layer
+ *   
+ * @author Reshma's
+ * 
+ */
+
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
@@ -28,7 +35,7 @@ import com.pack.cbs.service.CartServices;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = CartController.class)
-public class CartControllerTest {
+ class CartControllerTest {
 
 	 @Autowired
 	    private MockMvc mockMvc;
@@ -36,7 +43,7 @@ public class CartControllerTest {
 	    @MockBean
 	    private CartServices cartservice; 
 	@Test
-	public void testCreateProduct() throws Exception{
+	 void testCreateProduct() throws Exception{
 	        String URI = "/api/v2/saveProduct";
 	        Cart cart = new Cart();
 	        cart.setProductName("Water Bottle");
@@ -52,7 +59,7 @@ public class CartControllerTest {
 	        assertThat(jsonInput).isEqualTo(jsonOutput);
 	        Assert.assertEquals(HttpStatus.OK.value(), mockHttpServletResponse.getStatus());
 	    }
-	
+	 
 
 	@Test
 	void testGetProductById() throws Exception {

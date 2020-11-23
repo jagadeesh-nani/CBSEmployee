@@ -1,5 +1,11 @@
 package com.pack.cbs.dao;
 
+/** The CBSEmployeeRepositoryTest class provides testing of CBSEmployeeRepository layer
+ *   
+ * @author Reshma's
+ * 
+ */
+
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import org.junit.Assert;
@@ -14,7 +20,7 @@ import com.pack.cbs.model.CBSEmployee;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class CBSEmployeeRepositoryTest {
+ class CBSEmployeeRepositoryTest {
 
 	@Autowired
     private CBSEmployeeRepository employeerepository;
@@ -22,7 +28,7 @@ public class CBSEmployeeRepositoryTest {
     @Autowired
     private TestEntityManager testEntityManager;
     @Test
-    public void testNewEmployee() throws Exception{
+     void testNewEmployee() throws Exception{
     	CBSEmployee emp = getCBSEmployee();
     	CBSEmployee saveInDb = testEntityManager.persist(emp);
     	CBSEmployee getFromInDb = employeerepository.findById(saveInDb.getEmpId()).get();
@@ -37,7 +43,7 @@ public class CBSEmployeeRepositoryTest {
 		return emp;
 	}
 	@Test
-    public void testGetEmployeeById() throws Exception{
+    void testGetEmployeeById() throws Exception{
 		CBSEmployee emp=new CBSEmployee();
 		 emp.setEmpName("Reshma");
 	      emp.setEmpPhone(896658943); 
@@ -48,7 +54,7 @@ public class CBSEmployeeRepositoryTest {
         assertThat(getInDb).isEqualTo(saveInDb);
 	}
 	 @Test
-	    public void testGetAllEmployees() throws Exception{
+	     void testGetAllEmployees() throws Exception{
 		 CBSEmployee emp=new CBSEmployee();
 		 emp.setEmpName("Ajantha");
 	      emp.setEmpPhone(690658943); 
@@ -67,7 +73,7 @@ public class CBSEmployeeRepositoryTest {
 	        Assert.assertEquals(2, empList.size());
 	    }
 	 @Test
-	    public void testDeleteEmployeeById() throws Exception{
+	     void testDeleteEmployeeById() throws Exception{
 		 CBSEmployee emp=new CBSEmployee();
 		 emp.setEmpName("Rabia");
 	      emp.setEmpPhone(879658943); 
@@ -91,8 +97,8 @@ public class CBSEmployeeRepositoryTest {
 
 	    }
 	 @Test
-	    public void testUpdateEmployee(){
-
+	    void testUpdateEmployee(){
+ 
 		 CBSEmployee emp=new CBSEmployee();
 		 emp.setEmpName("Ellora");
 	      emp.setEmpPhone(690658943); 

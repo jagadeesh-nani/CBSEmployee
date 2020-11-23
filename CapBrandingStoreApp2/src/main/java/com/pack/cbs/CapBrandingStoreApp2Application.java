@@ -7,6 +7,12 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/** SpringBootApplication 
+ * 
+ * @author Reshma's 
+ *
+ */
+
 @SpringBootApplication
 public class CapBrandingStoreApp2Application implements ApplicationRunner {
     private static final Logger logger = LogManager.getLogger(CapBrandingStoreApp2Application.class);
@@ -14,7 +20,7 @@ public class CapBrandingStoreApp2Application implements ApplicationRunner {
     public static void main(String[] args) {
         SpringApplication.run(CapBrandingStoreApp2Application.class, args);
         
-    }
+    } 
 
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {

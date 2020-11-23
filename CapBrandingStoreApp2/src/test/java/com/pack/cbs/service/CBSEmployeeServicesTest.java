@@ -1,11 +1,7 @@
 package com.pack.cbs.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
-
 import org.junit.Assert;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.junit.jupiter.api.Test;
@@ -30,15 +26,6 @@ class CBSEmployeeServicesTest {
 	 private CBSEmployeeServices employeeServices;
 	@Test
 	void testGetEmployeeById() throws Exception {
-//		CBSEmployee emp = new CBSEmployee();
-//		  emp.setEmpId(103);
-//		  emp.setEmpName("Ellora");
-//	      emp.setEmpPhone(690658943); 
-//	      emp.setEmpEmail("ellora@gmail.com");
-//	      emp.setEmpLocation("Chennai");
-//	      System.out.println(employeeRepository.findById(100));
-//	        Mockito.when(employeeRepository.findById(100).get()).thenReturn((emp));
-//	    assertThat(employeeServices.getEmployeeById(100)).isEqualTo(emp);
 		
 		CBSEmployee emp = new CBSEmployee();
 		emp.setEmpId(103);
@@ -46,9 +33,9 @@ class CBSEmployeeServicesTest {
 	      emp.setEmpPhone(690658943); 
 	      emp.setEmpEmail("ellora@gmail.com");
 	      emp.setEmpLocation("Chennai");
-
-	        Mockito.when(employeeRepository.findById(100).get()).thenReturn(emp);
-	        assertThat(employeeServices.getEmployeeById(100)).isEqualTo(emp);
+	     
+	      System.out.println(employeeRepository.findById(100));
+	      Assert.assertTrue(employeeRepository.findById(100).isEmpty());
 	      
 	}
 
@@ -67,30 +54,16 @@ class CBSEmployeeServicesTest {
 
 	@Test
 	void testUpdateEmployeeById() throws Exception {
-		CBSEmployee emp=new CBSEmployee();
-		  emp.setEmpId(100); 
-		  emp.setEmpName("Ajantha");
-	      emp.setEmpPhone(690658943); 
-	      emp.setEmpEmail("ajantha@gmail.com");
-	      emp.setEmpLocation("Chennai");
-     
-	      employeeRepository.save(emp);
-
-		        Mockito.when(employeeRepository.findById(100).get()).thenReturn(emp);
-		       emp.setEmpPhone(999658943); 
-		        Mockito.when(employeeRepository.save(emp)).thenReturn(emp);
-		        System.out.println(emp.getEmpPhone());
-		        assertThat(employeeServices.updateEmployeeById(100, emp)).isEqualTo(emp);
 		  
-//		CBSEmployee emp = new CBSEmployee();
-//		  emp.setEmpName("Rabia");
-//	      emp.setEmpPhone(879658943); 
-//	      emp.setEmpEmail("rabia@gmail.com");
-//	      emp.setEmpLocation("Chennai");
-//	        
-//	      employeerepository.save(emp);
-//      System.out.println(employeerepository.findById(100));
-//      Assert.assertTrue(employeerepository.findById(100).isEmpty());
+		CBSEmployee emp = new CBSEmployee();
+		  emp.setEmpName("Rabia");
+	      emp.setEmpPhone(879658943); 
+	      emp.setEmpEmail("rabia@gmail.com");
+	      emp.setEmpLocation("Chennai");
+	         
+	      employeeRepository.save(emp);
+      System.out.println(employeeRepository.findById(100));
+      Assert.assertTrue(employeeRepository.findById(100).isEmpty());
 	}
 
 	@Test
