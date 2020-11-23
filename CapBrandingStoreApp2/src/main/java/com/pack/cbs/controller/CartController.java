@@ -44,7 +44,7 @@ public class CartController {
 	 */
 	
 	
-	@ApiOperation(value = "Get list of Product in the cart ", response = Iterable.class, tags = "CartController")
+	@ApiOperation(value = "Get list of Product in the cart ", response = Iterable.class)
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Success|OK"),
 			@ApiResponse(code = 401, message = "not authorized!"), 
@@ -65,7 +65,7 @@ public class CartController {
 	 */
 	
 	
-	@ApiOperation(value = "Get list of Product in the cart ", response = Iterable.class, tags = "CartController")
+	@ApiOperation(value = "Get list of Product in the cart ", response = Iterable.class)
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Success|OK"),
 			@ApiResponse(code = 401, message = "not authorized!"), 
@@ -88,7 +88,7 @@ public class CartController {
 	
 	
 	
-	@ApiOperation(value = "Get list of Product in the cart By Id ", response = Iterable.class, tags = "CartController")
+	@ApiOperation(value = "Get list of Product in the cart By Id ", response = Iterable.class)
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Success|OK"),
 			@ApiResponse(code = 401, message = "not authorized!"), 
@@ -113,7 +113,7 @@ public class CartController {
 	
 	
 	
-	@ApiOperation(value = "Update Product in the cart by Id ", response = Iterable.class, tags = "CartController")
+	@ApiOperation(value = "Update Product in the cart by Id ", response = Iterable.class)
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Success|OK"),
 			@ApiResponse(code = 401, message = "not authorized!"), 
@@ -139,7 +139,7 @@ public class CartController {
 	
 	
 	
-	@ApiOperation(value = "Delete Product in the cart ", response = Iterable.class, tags = "CartController")
+	@ApiOperation(value = "Delete Product in the cart ", response = Iterable.class)
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Success|OK"),
 			@ApiResponse(code = 401, message = "not authorized!"), 
